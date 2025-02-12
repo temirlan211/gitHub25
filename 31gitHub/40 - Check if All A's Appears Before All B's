@@ -1,0 +1,16 @@
+class Solution {
+    public boolean checkString(String s) {
+        
+    char [] temp = new char[s.length()];
+
+    boolean isAppear = false;
+
+    for(int i =1;i< s.length(); i++){
+        if(s.charAt(i-1) == 'b' && s.charAt(i) == 'a')
+        return isAppear; 
+    }
+    return true;
+
+
+    }
+}
