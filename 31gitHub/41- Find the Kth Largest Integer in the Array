@@ -1,0 +1,15 @@
+import java.math.BigInteger;
+class Solution {
+    public String kthLargestNumber(String[] nums, int k) {
+        BigInteger [] temp = new BigInteger[nums.length];
+
+        for(int i = 0; i< temp.length; i++){
+            temp[i] = new BigInteger(nums[i]);
+        }
+        
+        Arrays.sort(temp);
+
+        return String.valueOf(temp[nums.length-k]);
+
+    }
+}
