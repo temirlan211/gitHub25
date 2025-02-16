@@ -1,0 +1,15 @@
+class Solution {
+    public boolean areOccurrencesEqual(String s) {
+      HashMap<Character, Integer> table = new HashMap<>();
+        for(char i : s.toCharArray()){
+            table.put(i, table.getOrDefault(i,0)+1);
+        }
+            Set<Integer>l = new HashSet();
+        for(int  i : table.values()){
+                l.add(i);
+        }
+            if(l.size() == 1){
+                return true;
+            }else return false;
+    }
+}
