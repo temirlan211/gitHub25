@@ -1,0 +1,25 @@
+class Solution {
+    public boolean checkPerfectNumber(int num) {
+        if(num<=2){
+            return false;
+        }
+
+        int t = num;
+        int k = 0;
+        while(t%2 == 0){
+            k = k + t/2;
+            t = t/2;
+            if(t%2 != 0){
+                for( int i =1;i<t;i++){
+                    if(num%i == 0){
+                        k+=i;
+                    }
+                }
+            }
+    
+        }
+
+        if(k == num) return true;
+        else return false;
+    }
+}
